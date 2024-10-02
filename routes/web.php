@@ -11,14 +11,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('users', UserController::class); // Rutas CRUD para usuarios
 
 // Rutas específicas para productos y tienda
 Route::resource('productos', ProductoController::class);
 Route::resource('tiendas', TiendaController::class);
 
 // Ruta para la parte de administración
-Route::get('/admin', [UserController::class, 'index'])->name('admin.index');
+Route::get('/admin', [AdmController::class, 'index'])->name('admin.index');
 
 // Ruta para manejar el dashboard
 Route::get('/dash', function () {

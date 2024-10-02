@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" href="../images/logoo.png" type="image/x-icon">
     <style>
-        body {
-            background: url('../images/fondoo.jpg') no-repeat center center fixed;
-            background-size: cover;
-        }
+    body {
+        background: url('../images/fondoo.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
     </style>
 </head>
 
@@ -87,7 +87,8 @@
                                 <strong>Correo:</strong> {{ $user->correo }}
                             </p>
                             <!-- Botón para ver detalles -->
-                            <a href="{{ route('../views/adms/show.blade.php', $user->id) }}" class="btn btn-outline-secondary stretched-link">
+                            <a href="{{ route('../views/adms/show.blade.php', $user->id) }}"
+                                class="btn btn-outline-secondary stretched-link">
                                 <i class="feather icon-eye"></i> Ver Detalles
                             </a>
 
@@ -95,7 +96,8 @@
                             <a href="{{ route('users.edit', $user->id) }}" class="btn btn-warning">
                                 <i class="feather icon-edit"></i> Editar
                             </a>
-                            <form action="{{ route('users.destroy', $user->id) }}" method="POST" style="display:inline;">
+                            <form action="{{ route('users.destroy', $user->id) }}" method="POST"
+                                style="display:inline;">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">
@@ -110,7 +112,8 @@
         </div>
 
         <!-- Modal para agregar nuevo usuario -->
-        <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+        <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -124,25 +127,30 @@
                             @csrf
                             <div class="form-group">
                                 <label for="nombre">Nombre</label>
-                                <input type="text" class="form-control" id="nombre" name="nombre" maxlength="80" placeholder="Ingresa el nombre" required>
+                                <input type="text" class="form-control" id="nombre" name="nombre" maxlength="80"
+                                    placeholder="Ingresa el nombre" required>
                             </div>
                             <div class="form-group">
                                 <label for="tel">Teléfono</label>
-                                <input type="text" class="form-control" id="tel" name="tel" maxlength="10" placeholder="Ingresa el teléfono" required>
+                                <input type="text" class="form-control" id="tel" name="tel" maxlength="10"
+                                    placeholder="Ingresa el teléfono" required>
                             </div>
                             <div class="form-group">
                                 <label for="correo">Correo</label>
-                                <input type="email" class="form-control" id="correo" name="correo" maxlength="300" placeholder="Ingresa el correo" required>
+                                <input type="email" class="form-control" id="correo" name="correo" maxlength="300"
+                                    placeholder="Ingresa el correo" required>
                             </div>
                             <div class="form-group">
                                 <label for="password">Contraseña</label>
                                 <input type="password" class="form-control" id="password" name="password" required>
-                                <small class="form-text text-muted">Debe tener al menos 8 caracteres y combinar letras, números y símbolos.</small>
+                                <small class="form-text text-muted">Debe tener al menos 8 caracteres y combinar letras,
+                                    números y símbolos.</small>
                             </div>
 
                             <div class="form-group">
                                 <label for="password_confirmation">Confirmar Contraseña</label>
-                                <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required>
+                                <input type="password" class="form-control" id="password_confirmation"
+                                    name="password_confirmation" required>
                             </div>
                             <div class="form-group">
                                 <label for="foto">Foto</label>
@@ -164,7 +172,7 @@
     <script src="../js/pcoded.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
-        feather.replace();
+    feather.replace();
     </script>
 </body>
 
