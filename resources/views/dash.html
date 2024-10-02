@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ablepro v8.0 bootstrap admin template by Phoenixcoded</title>
+ 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="">
+    <meta name="author" content="Phoenixcoded" />
+    <!-- Favicon icon -->
+
+	<link rel="icon" href="../images/logoo.png" type="image/x-icon">
+    <!-- vendor css -->
+    <link rel="stylesheet" href="../css/style.css">
+    
+	<style>
+        body {
+            background: url('../images/fondoo.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+
+</head>
+<body class="">
+	<!-- [ Pre-loader ] start -->
+	<div class="loader-bg">
+		<div class="loader-track">
+			
+		</div>
+	</div>
+	<!-- [ Pre-loader ] End -->
+	<!-- [ navigation menu ] start -->
+	<nav class="pcoded-navbar menu-light">
+		<div class="navbar-wrapper">
+			<div class="navbar-content scroll-div">
+	
+				<div class="">
+					<div class="main-menu-header">
+						<img class="img-radius" src="../images/logo.png" alt="User-Profile-Image">
+						<div class="user-details">
+							<div id="more-details">F&D FARMACIA</div>
+						</div>
+					</div>
+				</div>
+	
+				<ul class="nav pcoded-inner-navbar">
+					<li class="nav-item pcoded-menu-caption">
+						<label>Navigation</label>
+					</li>
+					<li class="nav-item">
+						<a href="dash.html" class="nav-link menu-link">
+							<span class="pcoded-micon">
+								<i data-feather="home"></i>
+							</span>
+							<span class="pcoded-mtext">Dashboard</span>
+						</a>
+					</li>
+	
+					<li class="nav-item pcoded-menu-caption">
+						<label>Administracion</label>
+					</li>
+					<li class="nav-item">
+						<a href="adminU.html" class="nav-link menu-link">
+							<span class="pcoded-micon">
+								<i data-feather="users"></i>
+							</span>
+							<span class="pcoded-mtext">Usuarios</span>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="produc.html" class="nav-link menu-link">
+							<span class="pcoded-micon">
+								<i data-feather="file-text"></i>
+							</span>
+							<span class="pcoded-mtext">Productos</span>
+						</a>
+					</li>
+				</ul>
+	
+			</div>
+		</div>
+	</nav>
+	
+	<!-- [ navigation menu ] end -->
+	<!-- [ Header ] start -->
+	<header class="navbar pcoded-header navbar-expand-lg navbar-light header-blue">
+
+				<div class="m-header">
+					<a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+					<a href="#!" class="b-brand">
+						<img src="../images/logoo.png" alt="" class="logo" >
+						<!-- ========   change your logo hear   ============ -->
+					
+					</a>
+					<a href="#!" class="mob-toggler">
+						<i class="feather icon-more-vertical"></i>
+					</a>
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item">
+							
+							<div class="search-bar">
+								
+								<button type="button" class="close" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+						</li>
+					</ul>
+			
+				</div>
+				<div class="collapse navbar-collapse">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item">
+							<!-- Botón para cerrar sesión -->
+							<button class="btn btn-primary" data-toggle="modal" data-target="#logoutModal" style="background-color: #4169e1; border-color: #4169e1;">Cerrar Sesión</button>
+
+						</li>
+					</ul>
+				</div>
+				
+			
+	</header>
+	<!-- [ Header ] end -->
+	
+	<!-- Modal de Confirmación de Cerrar Sesión -->
+<!-- Modal de Confirmación de Cerrar Sesión -->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="logoutModalLabel">Confirmación de Cerrar Sesión</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ¿Estás seguro de que deseas cerrar sesión?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger" id="confirmLogout">Cerrar Sesión</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- [ Main Content ] start -->
+<div class="pcoded-main-container">
+    <div class="pcoded-content">
+        <div class="container mt-4 d-flex justify-content-center">
+            <div class="row w-75 justify-content-center">
+                <!-- Card 1 -->
+                <div class="col-md-5">
+                    <div class="card text-white bg-primary mb-3">
+                        <div class="card-header text-center">Estadísticas de Productos</div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Total de Productos Agregados</h5>
+                            <p class="card-text">Actualmente contamos con <strong>150</strong> productos en stock.</p>
+                            <a href="produc.html" class="btn btn-light">Ver Productos</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-5">
+                    <div class="card text-white bg-success mb-3">
+                        <div class="card-header text-center">Usuarios Registrados</div>
+                        <div class="card-body text-center">
+                            <h5 class="card-title">Total de Usuarios</h5>
+                            <p class="card-text">Hay <strong>35</strong> usuarios registrados en la plataforma.</p>
+                            <a href="adminU.html" class="btn btn-light">Ver Usuarios</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- Required Js -->
+    <script src="../js/vendor-all.min.js"></script>
+    <script src="../js/plugins/bootstrap.min.js"></script>
+ 
+    <script src="../js/pcoded.min.js"></script>
+
+<!-- Apex Chart -->
+<script src="../js/plugins/apexcharts.min.js"></script>
+
+
+<!-- custom-chart js -->
+<script src="../js/pages/dashboard-main.js"></script>
+<script src="https://unpkg.com/feather-icons"></script>
+<script>
+    feather.replace();
+</script>
+<script>
+    document.getElementById("confirmLogout").addEventListener("click", function() {
+        // Redirige a index.html
+        window.location.href = "/xampp/3A_UNI1_WEB/Farmacia/index.html";
+
+    });
+</script>
+
+
+</body>
+
+</html>

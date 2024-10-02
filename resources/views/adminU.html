@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Administrador de Usuarios - F&D Farmacia</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../images/logoo.png" type="image/x-icon">
+    <style>
+        body {
+            background: url('../images/fondoo.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+
+<body>
+    <nav class="pcoded-navbar menu-light">
+        <div class="navbar-wrapper">
+            <div class="navbar-content scroll-div">
+                <div class="">
+                    <div class="main-menu-header">
+                        <img class="img-radius" src="../images/logo.png" alt="User-Profile-Image">
+                        <div class="user-details">
+                            <div id="more-details">F&D FARMACIA</div>
+                        </div>
+                    </div>
+                </div>
+
+                <ul class="nav pcoded-inner-navbar">
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Navigation</label>
+                    </li>
+                    <li class="nav-item">
+                        <a href="dash.html" class="nav-link menu-link">
+                            <span class="pcoded-micon">
+                                <i data-feather="home"></i>
+                            </span>
+                            <span class="pcoded-mtext">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="nav-item pcoded-menu-caption">
+                        <label>Administracion</label>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link menu-link" data-toggle="modal" data-target="#userModal">
+                            <span class="pcoded-micon">
+                                <i data-feather="users"></i>
+                            </span>
+                            <span class="pcoded-mtext">Usuarios</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="produc.html" class="nav-link menu-link">
+                            <span class="pcoded-micon">
+                                <i data-feather="file-text"></i>
+                            </span>
+                            <span class="pcoded-mtext">Productos</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="navbar pcoded-header navbar-expand-lg navbar-light header-blue">
+        <div class="m-header">
+            <a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
+            <a href="#!" class="b-brand">
+                <img src="../images/logoo.png" alt="" class="logo" >
+                <img src="../images/logo-icon.png" alt="" class="logo-thumb">
+            </a>
+            <a href="#!" class="mob-toggler">
+                <i class="feather icon-more-vertical"></i>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <!-- Botón para cerrar sesión -->
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#logoutModal" style="background-color: #4169e1; border-color: #4169e1;">Cerrar Sesión</button>
+
+                </li>
+            </ul>
+        </div>
+    </header>
+<!-- Modal de Confirmación de Cerrar Sesión -->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="logoutModalLabel">Confirmación de Cerrar Sesión</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                ¿Estás seguro de que deseas cerrar sesión?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger" id="confirmLogout">Cerrar Sesión</button>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- [ Main Container ] -->
+    <section class="pcoded-main-container">
+        
+        <!-- Modal de Administrador de Usuarios -->
+        <div class="modal fade" id="userModal" tabindex="-1" role="dialog" aria-labelledby="userModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="userModalLabel">Administrador de Usuarios</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="nombre">Nombre</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" maxlength="80" placeholder="Ingresa el nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="tel">Teléfono</label>
+                                <input type="text" class="form-control" id="tel" name="tel" maxlength="10" placeholder="Ingresa el teléfono" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="correo">Correo</label>
+                                <input type="email" class="form-control" id="correo" name="correo" maxlength="300" placeholder="Ingresa el correo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="foto">Foto</label>
+                                <input type="file" class="form-control" id="foto" name="foto" accept="image/*">
+                            </div>
+                            <div class="form-group">
+                                <label for="tienda_id">ID de Tienda</label>
+                                <input type="number" class="form-control" id="tienda_id" name="tienda_id" placeholder="Ingresa el ID de la tienda">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Catálogo de Clientes -->
+        <div class="container mt-5">
+            <br>
+            <h3>Catálogo de Clientes</h3>
+            <!-- Botón para abrir el modal de agregar cliente -->
+            <button class="btn btn-success mb-3" data-toggle="modal" data-target="#userModal">Agregar Cliente</button>
+
+        
+                <!-- Plantilla de cliente (puedes repetirla para mostrar diferentes clientes) -->
+                <!-- Catálogo de Clientes -->
+<div class="container mt-5">
+    
+    <!-- Botón para abrir el modal de agregar cliente -->
+ 
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Plantilla de cliente (puedes repetirla para mostrar diferentes clientes) -->
+        <div class="col">
+            <div class="card shadow-sm h-100">
+                <img src="ruta/a/la/foto.jpg" class="card-img-top" alt="Foto del Cliente">
+                <div class="card-body">
+                    <h5 class="card-title text-primary">Nombre del Cliente</h5>
+                    <p class="card-text">
+                        <strong>Teléfono:</strong> 1234567890 <br>
+                        <strong>Correo:</strong> ejemplo@correo.com
+                    </p>
+                    <a href="#" class="btn btn-outline-secondary stretched-link">
+                        <i class="feather icon-eye"></i> Ver Detalles
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- Repetir la plantilla para más clientes -->
+    </div>
+</div>
+
+                <!-- Repetir la plantilla para más clientes -->
+            </div>
+        
+    </section>
+
+    <!-- Scripts Requeridos -->
+    <script src="../js/vendor-all.min.js"></script>
+    <script src="../js/plugins/bootstrap.min.js"></script>
+    <script src="../js/pcoded.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        feather.replace();
+    </script>
+    <script>
+        document.getElementById("confirmLogout").addEventListener("click", function() {
+            // Redirige a index.html
+            window.location.href = "/xampp/3A_UNI1_WEB/Farmacia/index.html";
+    
+        });
+    </script>
+</body>
+
+</html>
+
