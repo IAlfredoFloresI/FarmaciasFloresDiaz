@@ -135,7 +135,7 @@
             <h2 class="display-1 ls-1"><span class="fw-bold" style="color: rgb(16, 29, 87); font-size: 80px;"> F&D</span> <span class="fw-bold">FARMACIA</span></h2>
         
             <div class="d-flex gap-3">
-              <a href="view/login.html" class="btn btn-primary text-uppercase fs-6 rounded-pill px-4 py-3 mt-3" style="background-color: rgb(27, 42, 65);"><strong>Iniciar sesión</strong></a>
+              <a href="view/login.blade.php" class="btn btn-primary text-uppercase fs-6 rounded-pill px-4 py-3 mt-3" style="background-color: rgb(27, 42, 65);"><strong>Iniciar sesión</strong></a>
 
             </div>
             <div class="row my-5">
